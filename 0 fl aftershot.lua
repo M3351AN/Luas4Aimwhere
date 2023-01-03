@@ -12,7 +12,7 @@ callbacks.Register("createmove", "timer",function()
     if reset == 1 and shotTime < globals.TickCount() then 
         gui.SetValue("misc.fakelag.factor",originFl)--reset fl
         reset = 0
-    else if reset == 1 and shotTime > globals.TickCount() then--anti other fl luas.15ticks such long long a time right?
+    elseif reset == 1 and shotTime > globals.TickCount() then--anti other fl luas.15ticks such long long a time right?
         gui.SetValue("misc.fakelag.factor",0)--keep fl 0 
     end
 end)
